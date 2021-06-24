@@ -203,6 +203,7 @@ div.fadeIn {
   }
   .btn-play-again {
     padding: 5px;
+    width:40%;
     font-size: large;
     box-shadow: 2px 2px 5px 1px #ceada7;
   }
