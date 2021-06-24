@@ -1,0 +1,209 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  height: 100vh;
+  background-color: rgb(30, 68, 63);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.score {
+  color: rgb(224, 224, 224);
+  height: 20vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.score h2 {
+  font-size: 30px;
+}
+.score p {
+  text-align: center;
+  padding: 10px;
+  font-size: 25px;
+}
+
+.intro {
+  color: rgb(224, 224, 224);
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  transition: opacity 0.5s ease;
+}
+.intro h1 {
+  font-size: 50px;
+  margin-top: 40px;
+}
+.intro button,
+.match button {
+  width: 150px;
+  height: 50px;
+  background: none;
+  border: none;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  background: rgb(116, 255, 213);
+  border-radius: 3px;
+  cursor: pointer;
+}
+.match {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.5s ease 0.5s;
+}
+.winner {
+  color: rgb(224, 224, 224);
+  text-align: center;
+  font-size: 50px;
+}
+
+.hands,
+.options {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.match p {
+  align-items: center;
+  justify-content: end;
+  display: flex;
+  font-size: x-large;
+  color: rgb(224, 224, 224);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 5px solid rgb(20, 95, 72);
+}
+.player-hand {
+  transform: rotateY(180deg);
+}
+div.fadeOut {
+  opacity: 0;
+  pointer-events: none;
+}
+p.fadeOut {
+  opacity: 0;
+  pointer-events: none;
+}
+.btn-play-again {
+  background: rgb(116, 255, 213);
+  text-align: center;
+  margin-top: 40px;
+  width: 20%;
+  border: none;
+  cursor: pointer;
+  font-size: xx-large;
+  box-shadow: 2px 2px 5px 1px #ceada7;
+}
+.p {
+  margin-top: 60px;
+  text-align: center;
+  font-size: x-large;
+  color: rgb(224, 224, 224);
+}
+p.fadeIn {
+  opacity: 1;
+  pointer-events: all;
+}
+
+div.fadeIn {
+  opacity: 1;
+  pointer-events: all;
+}
+
+@keyframes shakePlayer {
+  0% {
+    transform: rotateY(180deg) translateY(0px);
+  }
+  15% {
+    transform: rotateY(180deg) translateY(-50px);
+  }
+  25% {
+    transform: rotateY(180deg) translateY(0px);
+  }
+  35% {
+    transform: rotateY(180deg) translateY(-50px);
+  }
+  50% {
+    transform: rotateY(180deg) translateY(0px);
+  }
+  /* /* 65% {
+    transform: rotateY(180deg) translateY(-50px);
+  } 
+  75% {
+    transform: rotateY(180deg) translateY(0px);
+  }*/
+  85% {
+    transform: rotateY(180deg) translateY(-50px);
+  }
+  100% {
+    transform: rotateY(180deg) translateY(0px);
+  }
+}
+
+@keyframes shakeComputer {
+  0% {
+    transform: translateY(0px);
+  }
+  15% {
+    transform: translateY(-50px);
+  }
+  25% {
+    transform: translateY(0px);
+  }
+  35% {
+    transform: translateY(-50px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  /* 65% {
+    transform: translateY(-50px);
+  } 
+  75% {
+    transform: translateY(0px);
+  }*/
+  85% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@media (max-width: 600px) {
+  .game {
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+  }
+  .intro {
+    align-items: center;
+  }
+  .intro h1 {
+    font-size: 2em;
+    justify-content: center;
+    line-height: 1;
+  }
+  .hands img {
+    width: 150px;
+    margin-top: 20px;
+  }
+  .intro button {
+    width: 80px;
+    font-size: 1em;
+  }
+  .options button {
+    width: 80px;
+  }
+  .btn-play-again {
+    padding: 5px;
+    font-size: large;
+    box-shadow: 2px 2px 5px 1px #ceada7;
+  }
+}
